@@ -13,7 +13,10 @@ function Header({ cartCount, user }) {
         <Link to="/">Home</Link>
         <Link to="/cart">Cart ({cartCount})</Link>
         {user ? (
-          <button onClick={handleLogout} className="nav-btn">Logout</button>
+          <>
+            <Link to="/orders">My Orders</Link>
+            <button onClick={handleLogout} className="nav-btn">Logout</button>
+          </>
         ) : (
           <Link to="/login">Login</Link>
         )}
